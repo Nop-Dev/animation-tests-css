@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      background-color: mediumpurple;
+  }
+  
+  .square {
+      width: 4rem;
+      height: 4rem;
+      background-color: white;
+      opacity: .6;
+  }
+  
+  /* Usamos "animation-name" pra ouxa o nome da Keyframe criada */
+  .square {
+    animation-name: move;
+    animation-duration: 1s;
+
+    /* Usamos "animation-fill-mode" com "forwards" para determinar se o objeto vai continuar na posição que o keyframe deixou no final da animação, ou se ele vai voltar pro padão*/
+    animation-fill-mode: forwards;
+
+    /* Usamos "animation-direction" para definir de qual lado e para qual lado a animação vai fluir */
+    /* animation-direction: reverse; */
+
+    /* Em vez de usar 50% também podemos usar as propriedades: */
+    animation-direction: alternate;
+
+    /* E ao usar a propriedade abaixo, mostro quantas vezes eu quero que a animação se repita (quantas vezes eu quero que a animação se repita em números).
+    
+    Posso usar a forma abaixo para essa repetição ser infinita*/
+    animation-iteration-count: infinite;
+  }
+  
+  /* Toda animação tem um ponto de partida, e um ponto de término, um 0% e um 100%, um "From" e um "To" */
+
+  /* Usamos keyframes para criar animações */
+  @keyframes move {  
+
+    /* Ao setar "50%" a animação vai concluir o que eu configurar, e então voltar as suas propriedades iniciais, de 0%:
+
+    50% {
+      transform: translateX(calc(100vw - 100%));
+    } */
+
+    100% {
+      transform: translateX(calc(100vw - 100%));
+    }
+  }
