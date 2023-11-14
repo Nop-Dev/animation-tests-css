@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      background-color: mediumpurple;
+  }
+  
+  .square {
+      width: 4rem;
+      height: 4rem;
+      background-color: white;
+      opacity: .6;
+  }
+  
+  /* Usamos "animation-name" pra ouxa o nome da Keyframe criada */
+  .square {
+    animation-name: move;
+    animation-duration: 5s;
+
+    /* Usamos "animation-fill-mode" com "forwards" para determinar se o objeto vai continuar na posição que o keyframe deixou no final da animação, ou se ele vai voltar pro padão*/
+    animation-fill-mode: forwards;
+  }
+  
+  /* Toda animação tem um ponto de partida, e um ponto de término, um 0% e um 100%, um "From" e um "To" */
+
+  /* Usamos keyframes para criar animações */
+  @keyframes move {
+    0% {
+  
+    }
+  
+    100% {
+      transform: translateX(calc(100vw - 100%));
+    }
+  }
